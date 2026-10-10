@@ -15001,23 +15001,3 @@ Location:
 }
 
 /* ============= OTHERS AREA ENDS =============== *//*# sourceMappingURL=main.css.map */
-
-/* Let the hero artwork respond to its container instead of relying on a fixed box height. */
-.homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox {
-  height: auto;
-  min-height: clamp(24rem, 42vw, 37.5rem);
-}
-
-.homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox .side-bg1 {
-  top: 31.6%;
-}
-
-.homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox .side-bg2 {
-  top: -30.5%;
-}
-
-@media (max-width: 767px) {
-  .homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox .side-bg2 {
-    top: -43.8%;
-  }
-}
