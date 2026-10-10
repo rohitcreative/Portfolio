@@ -221,6 +221,9 @@ if ($('.text-anime-style-3').length) {
     "#blog",
     "#contact",
     ".about-section-area",
+    ".about-textarea",
+    ".pera-content",
+    ".list-area",
     ".skills-section-area",
     ".portfolio-section-area",
     ".progress-one_leftbox"
