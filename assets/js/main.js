@@ -212,6 +212,10 @@ if ($('.text-anime-style-3').length) {
   const sectionSelector = [
     ".all-section-area",
     ".header-section-area",
+    ".header-textarea",
+    ".socila-links-area",
+    ".about-boxareas",
+    ".about-boxarea",
     "#home",
     "#about",
     "#service",
