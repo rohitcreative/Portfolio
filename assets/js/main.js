@@ -211,6 +211,75 @@ if ($('.text-anime-style-3').length) {
 }
 
 
+// Keep scroll-based animations aligned when responsive content changes height.
+(function () {
+  let layoutRefreshFrame = null;
+  let resizeTimer = null;
+
+  function refreshLayoutMeasurements() {
+    if (layoutRefreshFrame !== null) {
+      window.cancelAnimationFrame(layoutRefreshFrame);
+    }
+
+    layoutRefreshFrame = window.requestAnimationFrame(function () {
+      layoutRefreshFrame = null;
+
+      // Recalculate the page progress indicator against the current document height.
+      const progressPath = document.querySelector(".progress-wrap path");
+      if (progressPath) {
+        const pathLength = progressPath.getTotalLength();
+        const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollTop = window.scrollY || window.pageYOffset;
+        const progress = scrollableHeight > 0
+          ? pathLength - (scrollTop * pathLength) / scrollableHeight
+          : pathLength;
+
+        progressPath.style.strokeDasharray = pathLength + " " + pathLength;
+        progressPath.style.strokeDashoffset = progress;
+      }
+
+      // GSAP ScrollTrigger uses document geometry; refresh after fonts, images, or sections resize.
+      if (window.ScrollTrigger && typeof window.ScrollTrigger.refresh === "function") {
+        window.ScrollTrigger.refresh();
+      }
+    });
+  }
+
+  function handleResize() {
+    window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(refreshLayoutMeasurements, 120);
+  }
+
+  window.addEventListener("load", refreshLayoutMeasurements);
+  window.addEventListener("resize", handleResize, { passive: true });
+  window.addEventListener("orientationchange", handleResize, { passive: true });
+
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(refreshLayoutMeasurements);
+  }
+
+  document.querySelectorAll("img").forEach(function (image) {
+    if (!image.complete) {
+      image.addEventListener("load", refreshLayoutMeasurements, { once: true });
+      image.addEventListener("error", refreshLayoutMeasurements, { once: true });
+    }
+  });
+
+  if ("ResizeObserver" in window) {
+    const layoutObserver = new ResizeObserver(handleResize);
+    const observedElements = document.querySelectorAll(
+      ".all-section-area, .about-textarea, .work-experience-table, .progress-one_leftbox"
+    );
+
+    observedElements.forEach(function (element) {
+      layoutObserver.observe(element);
+    });
+  }
+
+  refreshLayoutMeasurements();
+})();
+
+
 })(jQuery);
 
 
