@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">Rohit Yadav — 3D Animator, Unreal Environment Artist, CGI and VFX</title>
+  <desc id="desc">Dark cinematic banner with a green gradient, abstract wireframe curves, and creative portfolio branding.</desc>
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#69e879"/>
+      <stop offset="1" stop-color="#d8df35"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#9aa5b5" stroke-opacity=".12" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="320" rx="22" fill="#10151f"/>
+  <rect width="1200" height="320" rx="22" fill="url(#grid)"/>
+  <g fill="none" stroke="url(#accent)" stroke-width="2" opacity=".65">
+    <path d="M-30 250C190 40 340 410 560 170S920 -10 1230 110"/>
+    <path d="M-30 280C190 70 340 440 560 200S920 20 1230 140"/>
+    <path d="M-30 220C190 10 340 380 560 140S920 -40 1230 80"/>
+  </g>
+  <circle cx="1050" cy="155" r="118" fill="url(#accent)" opacity=".08"/>
+  <circle cx="1050" cy="155" r="88" fill="none" stroke="url(#accent)" stroke-opacity=".5" stroke-width="2"/>
+  <text x="72" y="118" fill="#f5f7fb" font-family="Arial, Helvetica, sans-serif" font-size="25" letter-spacing="7">CREATIVE PORTFOLIO</text>
+  <text x="68" y="190" fill="url(#accent)" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="62">ROHIT YADAV</text>
+  <text x="74" y="235" fill="#d3d9e4" font-family="Arial, Helvetica, sans-serif" font-size="23">3D ANIMATION  ·  UNREAL ENVIRONMENTS  ·  CGI / VFX</text>
+  <path d="M74 264H430" stroke="url(#accent)" stroke-width="5" stroke-linecap="round"/>
+</svg>
