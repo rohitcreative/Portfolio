@@ -15001,3 +15001,33 @@ Location:
 }
 
 /* ============= OTHERS AREA ENDS =============== *//*# sourceMappingURL=main.css.map */
+
+/* Targeted hero spacing: lift only the headline while preserving the artwork layout. */
+.homepage1-body .header-section-area .header-textarea .pbmit-heading-subheading > h1 {
+  transform: translateY(-16px);
+}
+
+/* Match the social row's top gap with the space before the About section. */
+.homepage1-body #home {
+  padding-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.homepage1-body .header-section-area .header-textarea .header-pera-area .socila-links-area {
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.homepage1-body .header-section-area .header-textarea .header-pera-area .socila-links-area ul li a {
+  margin-top: 0;
+}
+
+/* Center the stats column against the full About row on desktop and tablet. */
+@media (min-width: 768px) {
+  .homepage1-body #about > .about-section-area > .container > .row > .col-lg-4 {
+    display: flex;
+    align-items: center;
+  }
+
+  .homepage1-body #about > .about-section-area > .container > .row > .col-lg-4 > .about-boxareas {
+    width: 100%;
+  }
+}
