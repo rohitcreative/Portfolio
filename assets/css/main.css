@@ -15007,13 +15007,10 @@ Location:
   transform: translateY(-16px);
 }
 
-/* Match the social row's top gap with the space before the About section. */
-.homepage1-body #home {
-  padding-bottom: clamp(2rem, 4vw, 3rem);
-}
-
+/* Keep equal responsive spacing above and below the social row. */
 .homepage1-body .header-section-area .header-textarea .header-pera-area .socila-links-area {
   margin-top: clamp(2rem, 4vw, 3rem);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
 }
 
 .homepage1-body .header-section-area .header-textarea .header-pera-area .socila-links-area ul li a {
