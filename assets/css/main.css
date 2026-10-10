@@ -15002,52 +15002,6 @@ Location:
 
 /* ============= OTHERS AREA ENDS =============== *//*# sourceMappingURL=main.css.map */
 
-/* Work experience tables share one reusable style across desktop and mobile layouts. */
-.homepage1-body .work-experience-table {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-.homepage1-body .work-experience-table table {
-  width: 100%;
-  margin-bottom: 0;
-  border-color: rgba(255, 255, 255, 0.28);
-}
-
-.homepage1-body .work-experience-table thead {
-  background: linear-gradient(135deg, #2EFF6A, #ffd900);
-}
-
-.homepage1-body .work-experience-table thead th {
-  color: #17191f;
-  white-space: normal;
-}
-
-.homepage1-body .work-experience-table tbody {
-  color: #2EFF6A;
-}
-
-.homepage1-body .work-experience-table th,
-.homepage1-body .work-experience-table td {
-  padding: 0.65rem;
-  vertical-align: middle;
-}
-
-.homepage1-body .work-experience-table tbody tr {
-  transition: background-color 180ms ease;
-}
-
-.homepage1-body .work-experience-table tbody tr:hover {
-  background-color: rgba(46, 255, 106, 0.06);
-}
-
-@media (max-width: 575.98px) {
-  .homepage1-body .work-experience-table table {
-    min-width: 32rem;
-  }
-}
-
 /* Let the hero artwork respond to its container instead of relying on a fixed box height. */
 .homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox {
   height: auto;
